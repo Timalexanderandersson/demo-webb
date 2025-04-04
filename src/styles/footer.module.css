@@ -2,8 +2,6 @@
     background-color:rgb(243, 243, 243);
     color: rgb(68, 68, 68);
     padding: 20px 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -15,13 +13,13 @@
 
 .footerContent {
     display: flex;
-    justify-content: center; /* Centrerar innehållet horisontellt */
+    justify-content: center; 
     padding-bottom: 2px;
 }
 
 .footerColumn {
     display: flex;
-    flex-direction: column; /* Alla sektioner hamnar i en kolumn */
+    flex-direction: column; 
     gap: 20px;
     text-align: center;
 }

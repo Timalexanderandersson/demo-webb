@@ -10,20 +10,27 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.brandName}>Frisörsalong</div>
+      <div className={styles.innerdiv}>
+        <div className={styles.brandName}>Frisörsalong</div>
 
-      <div className={styles.menuIcon} onClick={toggleMenu}>
-        <span className={styles.burgerIcon}></span>
-        <span className={styles.burgerIcon}></span>
-        <span className={styles.burgerIcon}></span>
+        <div className={styles.menuIcon} onClick={toggleMenu}>
+          <span className={styles.burgerIcon}></span>
+          <span className={styles.burgerIcon}></span>
+          <span className={styles.burgerIcon}></span>
+        </div>
+
+        <div>
+          <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
+            {/* Wrapper för länkar i dropdown */}
+            <div className={styles.dropdownLinks}>
+              <li><a className={styles.newlink} href="/">Hem</a></li>
+              <li><a className={styles.newlink} href="/galleri">Galleri</a></li>
+              <li><a className={styles.newlink} href="/about">Om oss</a></li>
+              <li><a className={styles.newlink} href="/contact">Kontakt</a></li>
+            </div>
+          </ul>
+        </div>
       </div>
-
-      <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-        <li><a href="/">Hem</a></li>
-        <li><a href="/galleri">Galleri</a></li>
-        <li><a href="/about">Om oss</a></li>
-        <li><a href="/contact">Kontakt</a></li>
-      </ul>
     </nav>
   );
 };

@@ -2,53 +2,98 @@
 .navbar {
     display: flex;
     position: absolute;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+   
     color: white;
     z-index: 100;
+    width: 100%;
+    height: 12%;
+  }
+
+ 
+  .innerdiv {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    max-width: 120vh;
+    position: relative; 
+    padding: 30px 0;
+  }
+  
+  .innerdiv::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Sätt den längst ner på innerdiv */
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%;
+    height: 1.5px; /* Justera höjden på linjen */
+    background: linear-gradient(to right, white, transparent 50%, white);
   }
   
   .brandName {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: bold;
+    padding-left: 5vh;
+    
   }
-  
+
   .navLinks {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     list-style: none;
+    padding: 0;
   }
   
   .navLinks li {
-    display: inline-block;
+    position: relative; /* Gör att ::after kan placeras relativt till li */
+  }
+
+  .navLinks li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%; /* Starta linjen från 0% bredd */
+    height: 2px; /* Höjd på linjen */
+    background-color: white;
+    transition: width 0.3s ease-in-out; /* Lägg till en smidig transition */
   }
   
   .navLinks a {
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
-    padding: 10px;
+    font-size: 1.3rem;
+    padding: 1px;
+  }
+  .navLinks li:hover::after {
+    width: 100%; /* När man hovrar, fyll hela bredden */
   }
   
-  .navLinks a:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
-  /* Hamburger icon */
   .menuIcon {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
+    padding-bottom: 5px;
+    margin-top: auto;
   }
   
   .burgerIcon {
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: rgb(75, 75, 75);
     border-radius: 2px;
+  }
+  .dropdownLinks{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
   }
   
   /* For screens smaller than 768px */
@@ -61,8 +106,52 @@
       position: absolute;
       top: 70px;
       left: 0;
-      background-color: #333;
+      
       padding: 20px 0;
+    }
+    .navLinks li {
+      text-decoration: none;
+      color: white;
+      font-size: 1.3rem;
+      padding: 1px;
+      width: 75px;
+      
+    }
+    .navLinks li:hover::after {
+      width: 100%; /* När man hovrar, fyll hela bredden */
+    }
+    .newlink {
+      color: black !important; /* Lägg till !important för att säkerställa att denna stil tillämpas */
+    }
+    .menuIcon {
+      display: flex;
+      background-color: rgb(175, 175, 175);
+      padding: 8px;
+      opacity: 0.8;
+      border-radius: 3px;
+      
+    }
+    .menuIcon:hover {
+      display: flex;
+      background-color: rgb(146, 146, 146);
+      padding: 8px;
+      opacity: 0.8;
+    }
+    .burgerIcon:hover {
+      width: 30px;
+      height: 4px;
+      background-color: black; /* Svart färg på linjen */
+      opacity: 0.9; /* Lägger till lite genomskinlighet */
+    }
+    .innerdiv {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-content: center;
+      width: 100%;
+      max-width: 120vh;
+      position: relative; 
+      padding: 30px 0;
     }
   
     .navLinks.active {
@@ -71,6 +160,20 @@
   
     .menuIcon {
       display: flex;
+    }
+    .dropdownLinks{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      background-color: rgb(230, 230, 230);
+      padding: 0;
+      opacity: 0.9;
+      width: 40%;
+      border-radius: 2px;
+      padding: 2vh;
     }
   }
   

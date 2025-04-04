@@ -1,5 +1,6 @@
 /* homepage.module.css */
 .homepage {
+  height: auto;
     position: relative;
     overflow: hidden;
   }

@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import styles from '../styles/navbar.module.css'; // Importera din CSS-modul
+import { Link } from 'react-router-dom'; // Importera Link
+import styles from '../styles/navbar.module.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Stänger menyn
   };
 
   return (
@@ -21,12 +26,11 @@ const Navbar = () => {
 
         <div>
           <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-            {/* Wrapper för länkar i dropdown */}
             <div className={styles.dropdownLinks}>
-              <li><a className={styles.newlink} href="/">Hem</a></li>
-              <li><a className={styles.newlink} href="/galleri">Galleri</a></li>
-              <li><a className={styles.newlink} href="/about">Om oss</a></li>
-              <li><a className={styles.newlink} href="/contact">Kontakt</a></li>
+              <li><Link className={styles.newlink} to="/" onClick={closeMenu}>Hem</Link></li>
+              <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Galleri</Link></li>
+              <li><Link className={styles.newlink} to="/omoss" onClick={closeMenu}>Om oss</Link></li>
+              <li><Link className={styles.newlink} to="/kontakt" onClick={closeMenu}>Kontakt</Link></li>
             </div>
           </ul>
         </div>

@@ -4,7 +4,6 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-   
     color: white;
     z-index: 100;
     width: 100%;
@@ -174,6 +173,12 @@
       width: 40%;
       border-radius: 2px;
       padding: 2vh;
+    }
+    .brandName {
+      font-size: 1.9rem;
+      font-weight: bold;
+      padding-left: 9vh;
+      margin-left: 1vh;
     }
   }
   

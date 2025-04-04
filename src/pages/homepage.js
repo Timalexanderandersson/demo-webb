@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import styles from '../styles/homepage.module.css';
 import video from '../assets/newvideo.mp4'; // Justera sökvägen om det behövs
 import About from './aboutus';

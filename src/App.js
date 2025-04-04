@@ -6,6 +6,7 @@ import Navbar from './pages/navbar';
 import Footer from './pages/footer';
 import Gallery from './pages/galleri';
 import Contact from './pages/contact';
+import About from './pages/aboutus';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/galleri" element={<Gallery />} />
             <Route path="/kontakt" element={<Contact />} />
+            
           </Routes>
         </div>
         <Footer />

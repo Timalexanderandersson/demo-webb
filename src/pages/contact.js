@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/contact.module.css';
-import imagenav from '../assets/newpictures.webp';
+import imagenav from '../assets/nyaare.jpg';
 
 const Contact = () => {
   return (

@@ -11,15 +11,20 @@ const Homepage = () => {
           Your browser does not support the video tag.
         </video>
         <div className={styles.content}>
-            <div>
-            <h1 className={styles.header}>Välkommen till vår frisörsalong</h1>
-            <p className={styles.description}>Här på vår salong erbjuder vi bästa servicen för ditt hår.</p>
+            <div className={styles.contenttwo}>
+            <h1 className={styles.header}>Skapa din perfekta stil – vi har erfarenheten och passionen!</h1>
+            <p className={styles.description}> Vi strävar efter att skapa en varm och inbjudande atmosfär där du kan slappna av och känna dig som hemma.</p>
 
             </div>
           
           <div className={styles.buttons}>
-            <button className={styles.servicesBtn}>Våra tjänster</button>
-            <button className={styles.bookBtn}>Boka tid</button>
+          <h3 className={styles.servicesHeader}>Kontakta oss</h3>
+            <div className={styles.buttonstwo}>
+              
+            <button className={styles.servicesBtn}>Kontakta oss</button>
+            <button className={styles.servicesBtn}>Boka tid</button>
+            </div>
+            
           </div>
         </div>
       </div>

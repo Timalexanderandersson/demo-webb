@@ -8,7 +8,7 @@
   .videoContainer {
     position: relative;
     width: 100%;
-    height: 74vh;
+    height: 70vh;
     overflow: hidden;
   }
   
@@ -20,47 +20,110 @@
   
   .content {
     position: absolute;
-    top: 50%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
+    width: 100%;
     color: white;
-    padding: 20px;
-    max-width: 90%;
+    padding: 10px;
     z-index: 1;
+    max-width: 79vh;
+  }
+  .contenttwo{
+    max-width: 68vh;
+    padding: 1.4vh;
   }
   
+  .servicesHeader{
+    font-size: 1.3rem;
+    
+  }
   .header {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
   .description {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    
   }
   
   .buttons {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
-  
-  button {
-    background-color: #ff5e57;
+  .buttonstwo{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+  }
+
+  .servicesBtn{
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 1vh;
+    width: 19vh;
+    background-color: transparent;
     color: white;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s;
+    cursor:pointer;
+   
   }
+  .servicesBtn:hover{
+    background-color: rgb(235, 235, 235);
+    opacity: 0.8;
+    color:black;
+  }
+
+  /* För skärmar större än 1000px (knappar bredvid text) */
+  @media (min-width: 400px) {
   
-  button:hover {
-    background-color: #e04e44;
+    .header {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    .servicesBtn{
+      font-size: 1.1rem;
+     
+    }
+    .description {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .servicesHeader{
+      font-size: 1.4rem;
+      
+    }
   }
+
+    /* För skärmar större än 1000px (knappar bredvid text) */
+    @media (min-width: 600px) {
+  
+      .header {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+      
+      .servicesBtn{
+        font-size: 1.1rem;
+       
+      }
+      .description {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .servicesHeader{
+        font-size: 1.4rem;
+        
+      }
+    }
+  
+  
   
   /* För skärmar större än 1000px (knappar bredvid text) */
   @media (min-width: 1000px) {
@@ -71,14 +134,43 @@
       align-items: center;
       text-align: left;
       gap: 20px;
+      max-width: 95vh;
     }
   
     .buttons {
       flex-direction: column;
-      position: absolute;
-      right: 20px;
-      top: 50%;
+      margin-top: auto;
       transform: translateY(-50%);
+    }
+    .contenttwo {
+      margin-bottom: 0vh;
+    }
+    
+    .servicesBtn{
+      font-size: 1.2rem;
+     
+    }
+    .servicesBtn:hover{
+      background-color: rgb(235, 235, 235);
+      opacity: 0.8;
+      color:black;
+    }
+    .header {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .servicesBtn{
+      font-size: 1.1rem;
+     
+    }
+    .description {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .servicesHeader{
+      font-size: 1.5rem;
+      
     }
   }
   

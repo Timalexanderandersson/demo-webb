@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/gallery.module.css';
-import imagenav from '../assets/newpictures.webp';
+import imagenav from '../assets/nyaare.jpg';
 
 const Gallery = () => {
   const items = ['Bild 1', 'Bild 2', 'Bild 3', 'Bild 4']; // Här lägger du sen in riktiga bilder
@@ -16,7 +16,7 @@ const Gallery = () => {
 
   return (
     <div className={styles.galleryContainer}>
-        <img src={imagenav} alt="picture" className={styles.newpicturestyle} />
+        <img src={imagenav} alt="navbar bild" className={styles.newpicturestyle} />
         
       <h2 className={styles.title}>Galleri</h2>
       <div className={styles.carousel}>

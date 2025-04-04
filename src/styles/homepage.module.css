@@ -1,0 +1,83 @@
+/* homepage.module.css */
+.homepage {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .videoContainer {
+    position: relative;
+    width: 100%;
+    height: 74vh;
+    overflow: hidden;
+  }
+  
+  .backgroundVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 90%;
+    z-index: 1;
+  }
+  
+  .header {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    background-color: #ff5e57;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e04e44;
+  }
+  
+  /* För skärmar större än 1000px (knappar bredvid text) */
+  @media (min-width: 1000px) {
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      gap: 20px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  

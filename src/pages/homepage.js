@@ -4,12 +4,11 @@ import About from './aboutus';
 import ContactInfo from './findus';
 
 const Homepage = () => {
-  
   return (
     <>
       <div className={styles.homepage}>
         <div className={styles.videoContainer}>
-          <video autoPlay loop muted className={styles.backgroundVideo}>
+          <video autoPlay loop muted className={styles.backgroundVideo} playsInline>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -35,7 +34,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      
       <About />
       <ContactInfo />
     </>

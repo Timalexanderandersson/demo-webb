@@ -36,6 +36,10 @@ const Homepage = () => {
 
       <About />
       <ContactInfo />
+      <button className={styles.scrollToTopBtn} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+  ↑
+</button>
+
     </>
   );
 };

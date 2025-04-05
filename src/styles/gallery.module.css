@@ -121,6 +121,32 @@
  
  
 }
+
+/*Icon for scrolling to top*/
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  background: linear-gradient(to bottom, rgb(85, 85, 85), transparent 100%, rgb(201, 201, 201));
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8%; /* Gör knappen rund */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scrollToTopBtn:hover {
+  background-color: #4d4d4d;
+}
+
+.arrowIcon {
+  width: 50px; /* Ställ in storlek på pilen */
+  height: 30px;
+  stroke: white; /* Pilens färg */
+}
+
 @media screen and (min-width: 1000px) {
  
 

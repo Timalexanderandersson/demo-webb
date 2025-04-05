@@ -75,7 +75,7 @@
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     padding-bottom: 5px;
     margin-top: auto;
   }
@@ -145,7 +145,7 @@
     .innerdiv {
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 20px;
       align-content: center;
       width: 100%;
       max-width: 120vh;
@@ -177,7 +177,7 @@
     .brandName {
       font-size: 1.9rem;
       font-weight: bold;
-      padding-left: 9vh;
+      padding-left: 5vh;
       margin-left: 1vh;
     }
   }

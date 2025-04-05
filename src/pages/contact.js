@@ -16,7 +16,20 @@ const Contact = () => {
       </div>
       
 <div className={styles.contactFormContainer}>
-<form className={styles.contactForm}>
+<form 
+  name="kontakt" 
+  method="POST" 
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  className={styles.contactForm}
+>
+<input type="hidden" name="form-name" value="kontakt" />
+<p hidden>
+    <label>
+      Don’t fill this out if you're human: 
+      <input name="bot-field" />
+    </label>
+  </p>
         <input type="text" name="name" placeholder="Ditt namn" className={styles.inputField} required />
         <input type="email" name="email" placeholder="Din e-post" className={styles.inputField} required />
         <textarea name="message" placeholder="Ditt meddelande" className={styles.textArea} rows="6" required />

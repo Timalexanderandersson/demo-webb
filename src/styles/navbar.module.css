@@ -169,9 +169,11 @@
       list-style: none;
       background-color: rgb(230, 230, 230);
       padding: 0;
-      opacity: 0.9;
-      width: 40%;
-      border-radius: 2px;
+      border: 1px solid rgb(172, 172, 172);
+      width: 100%;
+      max-width: 36vh;
+      height: auto;
+      border-radius: 3px;
       padding: 2vh;
     }
     .brandName {

@@ -4,6 +4,9 @@ import styles from '../styles/contact.module.css';
 import imagenav from '../assets/nyaare.jpg';
 
 const Contact = () => {
+  /**
+   * denna component sammlar inmatning från användaren och skickar den till en server
+   */
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,7 +22,9 @@ const Contact = () => {
       [name]: value
     });
   };
-
+/***
+ * hanterar inmatning av formuläret och skickar den till servern på netlify
+ */
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;

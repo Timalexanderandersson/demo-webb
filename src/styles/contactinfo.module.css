@@ -1,66 +1,72 @@
+/* Wrapper: Håller hela komponenten centrerad på sidan */
 .wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
+  width: 100%; /* Full bredd */
+  display: flex; /* Flexbox för att centrera innehåll */
+  justify-content: center; /* Centrerar innehållet horisontellt */
+}
+
+/* Inner-container: Flexbox med bakgrund och padding */
+.inner {
+  max-width: 105vh; /* Maximal bredd på 105% av viewporthöjden */
+  margin-top: 4vh; /* Marginal uppe för att skapa lite luft */
+  display: flex; /* Flexbox för att styra layouten */
+  flex-direction: column; /* Kolumnlayout på små skärmar */
+  border-radius: 3px; /* Rundade hörn */
+  background: linear-gradient(to left, rgb(231, 231, 231), transparent 40%, white); /* Bakgrundsgradient */
+  margin-bottom: 4vh; /* Marginal under för att skapa luft */
+  padding: 3vh; /* Padding för att ge inre utrymme */
+}
+
+/* Textboxen för beskrivning */
+.textBox {
+  text-align: left; /* Texten justeras till vänster */
+}
+
+/* Rubrik i textboxen */
+.textBox h2 {
+  font-size: 2rem; /* Större fontstorlek för rubriken */
+  margin-bottom: 1rem; /* Marginal under rubriken */
+}
+
+/* Paragraf i textboxen */
+.textBox p {
+  font-size: 1rem; /* Standard fontstorlek */
+  line-height: 1.6; /* Lite större radavstånd för läsbarhet */
+}
+
+/* Mapboxen med inbäddad Google-karta */
+.mapBox iframe {
+  border-radius: 3px; /* Rundade hörn på kartan */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lätt skugga för kartan */
+  width: 98%; /* Full bredd på kartan, men lite luft på sidorna */
+  height: 35vh; /* Höjd på 35% av viewporthöjden */
+  max-width: 65vw; /* Maximal bredd på 65% av viewportbredden */
+}
+
+/* Responsiv layout för större skärmar (över 1000px) */
+@media (min-width: 1000px) {
+  /* Justera inner-container för större skärmar (horisontell layout) */
   .inner {
-    max-width: 105vh;
-    margin-top: 4vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 3px;
-    background: linear-gradient(to left, rgb(231, 231, 231), transparent 40%, white);
-    margin-bottom: 4vh;
-    padding: 3vh;
-  }
-  
-  .textBox {
-    text-align: left;
-  }
-  
-  .textBox h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    flex-direction: row; /* Kolumn till rad-läge */
+    align-items: center; /* Centrerar vertikalt */
+    justify-content: space-between; /* Sprider ut innehållet */
   }
 
-  .textBox p {
-    font-size: 1rem;
-    line-height: 1.6;
+  /* Textboxen och kartan får flex-egenskaper för att dela på utrymmet */
+  .textBox, .mapBox {
+    flex: 1; /* Gör båda elementen lika stora */
+    padding: 1rem; /* Lägg till lite padding för att ge utrymme runt innehållet */
   }
-  
+
+  /* Mer padding på höger sida för textboxen */
+  .textBox {
+    padding-right: 2rem;
+  }
+
+  /* Större bredd på kartan för större skärmar */
   .mapBox iframe {
-    border-radius: 3px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 98%;
-    height: 35vh;
-    max-width: 65vw;
-    
+    width: 100%; /* Full bredd */
+    height: 35vh; /* Behåll samma höjd */
+    max-width: 120vw; /* Maximal bredd på 120% av viewportbredden */
   }
-  
-  /* Responsiv layout för breda skärmar */
-  @media (min-width: 1000px) {
-    .inner {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    .textBox, .mapBox {
-      flex: 1;
-      padding: 1rem;
-    }
-  
-    .textBox {
-      padding-right: 2rem;
-    }
-    .mapBox iframe {
-        border-radius: 3px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        height: 35vh;
-        max-width: 120vw;
-        
-      }
-  }
-  
+}

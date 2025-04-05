@@ -1,56 +1,57 @@
+/* ----- Om oss sektion ----- */
 .aboutSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 5vh;
-  }
-  
-  .aboutContainer {
-    max-width: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2vh;
-    background: linear-gradient(to right, rgb(231, 231, 231), transparent 40%, white);
-    border-radius: 3px;
+  width: 100%; /* Fyller hela bredden */
+  display: flex; /* Flexbox för layout */
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  margin-top: 5vh; /* Lägger till toppmarginal */
+}
 
+/* ----- Container för "Om oss" sektionen ----- */
+.aboutContainer {
+  max-width: 70vh; /* Maxbredd för containern */
+  display: flex; /* Flexbox för layout */
+  flex-direction: column; /* Vertikal layout på små skärmar */
+  align-items: center; /* Centrerar innehållet horisontellt */
+  text-align: center; /* Texten centreras */
+  padding: 2vh; /* Lägger till utrymme runt innehållet */
+  background: linear-gradient(to right, rgb(231, 231, 231), transparent 40%, white); /* Bakgrund med gradient */
+  border-radius: 3px; /* Rundade hörn */
+}
+
+/* ----- Textcontainer ----- */
+.textContainer {
+  margin-bottom: 20px; /* Avstånd mellan text och bild */
+  text-align: left; /* Justerar texten till vänster på större skärmar */
+}
+
+/* ----- Bildcontainer ----- */
+.imageContainer img {
+  width: 100%; /* Gör bilden fullbredd */
+  max-width: 460px; /* Maxbredd för bilden */
+  height: 40vh; /* Höjd på 40% av viewporten */
+  object-fit: contain; /* Bibehåller bildens proportioner */
+  border-radius: 3px; /* Rundade hörn på bilden */
+}
+
+/* ----- Responsiv design för större skärmar (1000px eller större) ----- */
+@media (min-width: 1000px) {
+  .aboutContainer {
+      flex-direction: row; /* Ändrar layout till horisontell för större skärmar */
+      text-align: left; /* Textjustering till vänster på större skärmar */
+      align-items: center; /* Centrerar vertikalt på större skärmar */
+      max-width: 1000px; /* Maxbredd för större skärmar */
   }
 
   .textContainer {
-    margin-bottom: 20px;
-    text-align: left;
+      flex: 1; /* Ger textcontainern lika stor plats som bilden */
+      margin-right: 20px; /* Lägg till avstånd mellan text och bild */
   }
-  
+
+  .imageContainer {
+      flex: 1; /* Bilden får lika stor plats som texten */
+  }
+
   .imageContainer img {
-    width: 100%;
-    max-width: 460px;
-    height: 40vh;
-    object-fit:contain;
-    border-radius: 3px;
-    
+      max-width: 100%; /* Bilden fyller hela bredden på containern */
   }
-  
-  /* När skärmen är 1000px eller större */
-  @media (min-width: 1000px) {
-    .aboutContainer {
-      flex-direction: row;
-      text-align: left;
-      align-items: center;
-      max-width: 1000px;
-    }
-  
-    .textContainer {
-      flex: 1;
-      margin-right: 20px;
-    }
-  
-    .imageContainer {
-      flex: 1;
-    }
-  
-    .imageContainer img {
-      max-width: 100%;
-    }
-  }
-  
+}

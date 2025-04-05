@@ -1,63 +1,73 @@
+/* Footer container */
 .footer {
-    background-color:rgb(243, 243, 243);
-    color: rgb(68, 68, 68);
-    padding: 20px 0;
-    width: 100%;
+    background-color: rgb(243, 243, 243); /* Ljusgrå bakgrundsfärg */
+    color: rgb(68, 68, 68); /* Mörkgrå textfärg */
+    padding: 20px 0; /* Lite utrymme runtom innehållet */
+    width: 100%; /* Gör att footern täcker hela bredden */
 }
 
+/* Wrapper för footer-innehållet */
 .footerContainer {
-    max-width: 105vw;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 105vw; /* Sätter max-bredd till 105% av viewportens bredd (för att öka bredden något) */
+    margin: 0 auto; /* Centrerar footer-innehållet horisontellt */
+    padding: 0 20px; /* Lite padding på vänster och höger sida */
 }
 
+/* Footerens layout */
 .footerContent {
-    display: flex;
-    justify-content: center; 
-    padding-bottom: 1px;
+    display: flex; /* Gör att innehållet kan ordnas horisontellt med flexbox */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    padding-bottom: 1px; /* Lite padding under innehållet för separation */
 }
 
+/* Layout för varje kolumn i footern */
 .footerColumn {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    text-align: center;
+    display: flex; /* Flexbox för kolumnen */
+    flex-direction: column; /* Arrangerar innehåll vertikalt */
+    gap: 20px; /* Sätter avstånd mellan varje element i kolumnen */
+    text-align: center; /* Centrerar texten */
 }
 
-
+/* Media query för större skärmar */
 @media (min-width: 1000px) {
     .footerColumn {
-        flex-direction: row; 
-        width: 70%;
-        max-width: 102vh;
-        justify-content: space-between;
-        text-align: left; 
+        flex-direction: row; /* Om skärmstorleken är större än 1000px, ordnas kolumnerna horisontellt */
+        width: 70%; /* Sätter bredden på footer-kolumnen till 70% */
+        max-width: 102vh; /* Begränsar maxbredden till 102% av viewportens höjd */
+        justify-content: space-between; /* Delar upp kolumnerna och sätter dem på kanterna */
+        text-align: left; /* Texten justeras till vänster istället för att vara centrerad */
     }
-    .socialMedia{
-        justify-items: center;
+    .socialMedia {
+        justify-items: center; /* Centrerar sociala media-ikonerna */
     }
 }
 
+/* Stil för h4-element i footern */
 h4 {
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Lite utrymme under h4-elementet */
 }
 
+/* Ikoner i sociala medier */
 .icons a {
-    font-size: 24px;
-    color: rgb(27, 27, 27);
-    margin-right: 15px;
-    text-decoration: none;
+    font-size: 24px; /* Sätter storleken på ikonerna */
+    color: rgb(27, 27, 27); /* Standardfärg för ikonerna */
+    margin-right: 15px; /* Lite avstånd mellan ikonerna */
+    text-decoration: none; /* Tar bort understrykning på länkar */
 }
 
+/* Hover-effekt på ikoner */
 .icons a:hover {
-    color: #919191; 
-}
-.phoneNumbers p {
-    margin: 2px 0;
+    color: #919191; /* Färgen ändras när man hovrar över ikonerna */
 }
 
+/* Stil för telefonnummer i footern */
+.phoneNumbers p {
+    margin: 2px 0; /* Lite avstånd mellan telefonnummer-rader */
+}
+
+/* Copyright text längst ner */
 .copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    text-align: center; /* Centrerar texten */
+    margin-top: 20px; /* Lite utrymme över copyright-texten */
+    font-size: 14px; /* Sätter en mindre textstorlek */
 }

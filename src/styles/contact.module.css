@@ -1,3 +1,4 @@
+/* Contact page styles */
 .contactContainer {
     width: 100%;
     text-align: center;
@@ -56,6 +57,7 @@
     padding: 2vh;
   }
   
+  /* Form styling */
   .contactForm {
     display: flex;
     flex-direction: column;
@@ -64,14 +66,13 @@
     
   }
   .contactFormContainer{
-    display: flex;
-    width: 80%;
-    max-width: 65vh;
-    flex-direction: column;
-    gap: 1rem;
+    margin-top: 3vh;
     margin-bottom: 3vh;
-    padding-left: 2vh;
-    border-radius: 2px;
+    width: 100%;
+    max-width: 63vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
     
   }
   
@@ -120,10 +121,11 @@
     background-color: #4d4d4d;
   }
   
+  /*pilen till top*/
   .arrowIcon {
-    width: 50px; /* Ställ in storlek på pilen */
+    width: 50px; 
     height: 30px;
-    stroke: white; /* Pilens färg */
+    stroke: white; 
   }
 
   .backToHomeBtn{
@@ -142,28 +144,50 @@
     color: #999999;
     border: 1px solid rgb(202, 202, 202);
   }
+
+  /* tack meddelande*/
   .thankYouText{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 3vh;
     margin-bottom: 3vh;
     color: #383838;
     
-   
-
   }
 
-  @media (max-width: 400px) {
+
+  .contactFormContainertwo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vh;
+  }
+
+  .titletwo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    padding: 2vh;
+  }
+  
+  .descriptiontwo {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+    padding: 2vh;
+  }
+/*Media query för över 768px*/
+  @media (max-width: 768px) {
     .contactFormContainer{
-      display: flex;
-      width: 80%;
-      max-width: 65vh;
-      flex-direction: column;
-      gap: 1rem;
+      margin-top: 3vh;
       margin-bottom: 3vh;
-      align-self: flex-start;
-      padding-left: 2vh;
-      border-radius: 2px;
+      width: 90%;
       
+      text-align: left;
+      display: flex;
+      flex-direction: column;
     }
     .submitBtn{
       border: 1px solid rgb(54, 54, 54);
@@ -175,6 +199,15 @@
       cursor:pointer;
       font-size: 1.02rem;
      
+    }
+    .inputField,
+    .textArea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      width: 90%;
     }
 
   }

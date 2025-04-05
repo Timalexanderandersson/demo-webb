@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet'; // Importera Helmet för SEO
 import styles from '../styles/gallery.module.css';
 import imagenav from '../assets/nyaare.jpg';
 
@@ -8,7 +9,7 @@ import tredje from '../assets/anotherpic.jpg';
 import fjärde from '../assets/newpictures.webp';
 
 const Gallery = () => {
-  const items = [cooltss, andrabildenav, tredje, fjärde]; // Bilder istället för text
+  const items = [cooltss, andrabildenav, tredje, fjärde];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -21,6 +22,23 @@ const Gallery = () => {
 
   return (
     <div className={styles.galleryContainer}>
+      {/* Lägg till Helmet för SEO-optimering */}
+      <Helmet>
+        <title>Våra jobb - Din Hårsalong</title>
+        <meta
+          name="description"
+          content="Upptäck våra fantastiska jobb! Se före- och efterbilder på våra kunders hårstylingar och resultat. Få inspiration från vårt galleri."
+        />
+        <meta property="og:title" content="Våra jobb - Din Hårsalong" />
+        <meta
+          property="og:description"
+          content="Kolla in vårt galleri med före- och efterbilder på våra senaste hårstylingar och tjänster. Vi hjälper dig att få ditt drömutseende!"
+        />
+        <meta property="og:image" content="https://dinhemsida.se/your-image.jpg" />
+        <meta property="og:url" content="https://dinhemsida.se/våragalleri" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className={styles.galleryContainertwo}>
         <img src={imagenav} alt="navbar bild" className={styles.newpicturestyle} />
         <div className={styles.textContainer}>
@@ -50,10 +68,9 @@ const Gallery = () => {
         </div>
       </div>
       <button className={styles.scrollToTopBtn} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          ↑
-        </button>
+        ↑
+      </button>
     </div>
-         
   );
 };
 

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';  // Importera Helmet för SEO
 import styles from '../styles/contact.module.css';
-import imagenav from '../assets/nyaare.jpg';
+import imagenav from '../assets/nyaare.jpg';  // Se till att bilden har en beskrivande alt-text
 
 const Contact = () => {
-  /**
-   * denna component sammlar inmatning från användaren och skickar den till en server
-   */
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,6 +13,12 @@ const Contact = () => {
 
   const navigation = useNavigate();
 
+  // Använd useEffect istället för föråldrade livscykelmetoder
+  useEffect(() => {
+    // Här kan vi lägga till logik som skulle ha varit i componentWillMount
+    // Till exempel om vi ville sätta initiala data eller göra API-anrop
+  }, []);  // Tom array gör att denna kod körs endast vid första renderingen
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,9 +26,7 @@ const Contact = () => {
       [name]: value
     });
   };
-/***
- * hanterar inmatning av formuläret och skickar den till servern på netlify
- */
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -41,17 +43,28 @@ const Contact = () => {
 
   return (
     <div className={styles.contactContainer}>
-      <div className={styles.contactContainertwo}>
-        <img src={imagenav} alt="Top Banner" className={styles.bannerImage} />
+      {/* SEO metadata */}
+      <Helmet>
+        <title>Kontakta Oss - Din Hårsalong</title>
+        <meta name="description" content="Fyll i vårt formulär för att komma i kontakt med oss. Vi svarar så snart som möjligt. Kontakta Din Hårsalong för alla dina frisörtjänster." />
+        <meta property="og:title" content="Kontakta Oss - Din Hårsalong" />
+        <meta property="og:description" content="Kontakta oss för frisörtjänster, klippning, färgning och styling. Vi ser fram emot att höra från dig!" />
+        <meta property="og:image" content={imagenav} />
+        <meta property="og:url" content="https://dinhemsida.se/kontakt" />
+      </Helmet>
 
-        <div className={styles.contactContainertext}>
+      <div className={styles.contactContainertwo}>
+        {/* Image with alt-text for SEO */}
+        <img src={imagenav} alt="Kontakta oss på Din Hårsalong" className={styles.bannerImage} />
+
+        <section className={styles.contactContainertext}>
           <h2 className={styles.title}>Kontakta oss</h2>
           <p className={styles.description}>
             Fyll i formuläret nedan så återkommer vi till dig så snart som möjligt. Vi ser fram emot att höra från dig!
           </p>
-        </div>
+        </section>
 
-        <div className={styles.contactFormContainer}>
+        <section className={styles.contactFormContainer}>
           <form 
             name="kontakt" 
             method="POST" 
@@ -100,7 +113,7 @@ const Contact = () => {
 
             <button type="submit" className={styles.submitBtn}>Skicka meddelande</button>
           </form>
-        </div>
+        </section>
       </div>
 
       <button 

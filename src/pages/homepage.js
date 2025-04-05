@@ -2,6 +2,7 @@ import styles from '../styles/homepage.module.css';
 import video from '../assets/newvideo.mp4'; // Justera sökvägen om det behövs
 import About from './aboutus';
 import ContactInfo from './findus';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -26,8 +27,15 @@ const Homepage = () => {
             <div className={styles.buttons}>
               <h3 className={styles.servicesHeader}>Kontakta oss</h3>
               <div className={styles.buttonstwo}>
-                <button className={styles.servicesBtn}>Kontakta oss</button>
-                <button className={styles.servicesBtn}>Boka tid</button>
+            
+<Link to="/kontakt" className={styles.servicesBtnlink}>
+  Kontakta oss
+</Link>
+
+<a href="https://www.dinsida.com/bokning" className={styles.servicesBtn} target="_blank" rel="noopener noreferrer">
+  Boka tid
+</a>
+
               </div>
             </div>
           </div>

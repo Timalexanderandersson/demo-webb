@@ -66,12 +66,35 @@
     gap:20px;
     align-items: center;
   }
+  .servicesBtnlink{
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 1vh;
+    background-color: transparent;
+    color: white;
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 17vh;
+    
+    
+  }
+  .servicesBtnlink:hover{
+    background-color: rgb(235, 235, 235);
+    opacity: 0.8;
+    color:black;
+  }
 
   .servicesBtn{
     border: 1px solid white;
     border-radius: 2px;
+    text-align: center;
     padding: 1vh;
-    width: 19vh;
+   width: 18vh;
+   font-weight: 500;
+   text-decoration: none;
     background-color: transparent;
     color: white;
     cursor:pointer;

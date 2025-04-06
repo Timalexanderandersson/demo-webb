@@ -23,6 +23,22 @@ const Gallery = () => {
   return (
     <div className={styles.galleryContainer}>
       {/* Lägg till Helmet för SEO-optimering */}
+      <Helmet>
+        <title>Våra projekt – Din Hantverkare</title>
+        <meta
+          name="description"
+          content="Upptäck våra tidigare bygg- och renoveringsprojekt. Se före- och efterbilder och inspireras av vad vi kan göra för dig!"
+        />
+        <meta property="og:title" content="Våra projekt – Din Hantverkare" />
+        <meta
+          property="og:description"
+          content="Kolla in vårt galleri med före- och efterbilder på renoveringar, byggnationer och andra hantverksjobb vi har gjort. Kvalitet i varje detalj!"
+        />
+        <meta property="og:image" content="https://dinhemsida.se/bilder/renovering.jpg" />
+        <meta property="og:url" content="https://dinhemsida.se/vara-projekt" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className={styles.galleryContainertwo}>
         <img src={imagenav} alt="navbar bild" className={styles.newpicturestyle} />
         <div className={styles.textContainer}>

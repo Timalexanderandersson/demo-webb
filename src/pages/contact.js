@@ -53,14 +53,14 @@ const QuoteRequest = () => {
 
         <section className={styles.contactFormContainer}>
           <form
-            name="offert"
+            name="kontakt"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className={styles.contactForm}
           >
-            <input type="hidden" name="form-name" value="offert" />
+            <input type="hidden" name="form-name" value="kontakt" />
             <p hidden>
               <label>
                 Don’t fill this out if you're human:

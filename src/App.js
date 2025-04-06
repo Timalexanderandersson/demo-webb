@@ -7,6 +7,7 @@ import Footer from './pages/footer';
 import Gallery from './pages/galleri';
 import Contact from './pages/contact';
 import TackFörDittMeddelande from './pages/thxformessage';
+import NotFound from './pages/404';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/galleri" element={<Gallery />} />
             <Route path="/kontakt" element={<Contact />} />
             <Route path="/tackfördittmeddelande" element={<TackFörDittMeddelande />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />

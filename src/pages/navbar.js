@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.innerdiv}>
-        <div className={styles.brandName}>Frisörsalong</div>
+        <div className={styles.brandName}>Demo Hantverkare</div>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           <span className={styles.burgerIcon}></span>
           <span className={styles.burgerIcon}></span>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
           <div className={styles.dropdownLinks}>
             <li><Link className={styles.newlink} to="/" onClick={closeMenu}>Hem</Link></li>
-            <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Galleri</Link></li>
+            <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Våra jobb</Link></li>
             <li><HashLink className={styles.newlink} to='/#omoss' onClick={closeMenu}>Om oss</HashLink></li> {/* Använd HashLink */}
             <li><Link className={styles.newlink} to="/kontakt" onClick={closeMenu}>Kontakt</Link></li>
           </div>

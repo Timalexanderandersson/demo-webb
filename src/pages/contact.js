@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';  // Importera Helmet för SEO
 import styles from '../styles/contact.module.css';
-import imagenav from '../assets/nyaare.jpg';  // Se till att bilden har en beskrivande alt-text
+import imagenav from '../assets/nyaare.jpg'; 
 
-const Contact = () => {
+const QuoteRequest = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    phone: '', 
+    projectDescription: '',
+    projectDetails: '',
   });
 
   const navigation = useNavigate();
-
-  // Använd useEffect istället för föråldrade livscykelmetoder
-  useEffect(() => {
-    // Här kan vi lägga till logik som skulle ha varit i componentWillMount
-    // Till exempel om vi ville sätta initiala data eller göra API-anrop
-  }, []);  // Tom array gör att denna kod körs endast vid första renderingen
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,37 +39,28 @@ const Contact = () => {
 
   return (
     <div className={styles.contactContainer}>
-      {/* SEO metadata */}
-      <Helmet>
-        <title>Kontakta Oss - Din Hårsalong</title>
-        <meta name="description" content="Fyll i vårt formulär för att komma i kontakt med oss. Vi svarar så snart som möjligt. Kontakta Din Hårsalong för alla dina frisörtjänster." />
-        <meta property="og:title" content="Kontakta Oss - Din Hårsalong" />
-        <meta property="og:description" content="Kontakta oss för frisörtjänster, klippning, färgning och styling. Vi ser fram emot att höra från dig!" />
-        <meta property="og:image" content={imagenav} />
-        <meta property="og:url" content="https://dinhemsida.se/kontakt" />
-      </Helmet>
 
       <div className={styles.contactContainertwo}>
-        {/* Image with alt-text for SEO */}
-        <img src={imagenav} alt="Kontakta oss på Din Hårsalong" className={styles.bannerImage} />
+
+        <img src={imagenav} alt="Begär en offert för hantverkstjänster" className={styles.bannerImage} />
 
         <section className={styles.contactContainertext}>
-          <h2 className={styles.title}>Kontakta oss</h2>
+          <h2 className={styles.title}>Begär en Offert</h2>
           <p className={styles.description}>
-            Fyll i formuläret nedan så återkommer vi till dig så snart som möjligt. Vi ser fram emot att höra från dig!
+            Fyll i formuläret nedan för att få en offert på vårt hantverksarbete. Vi återkommer så snart som möjligt med en kostnadsfri offert baserat på ditt projekt.
           </p>
         </section>
 
         <section className={styles.contactFormContainer}>
-          <form 
-            name="kontakt" 
-            method="POST" 
+          <form
+            name="offert"
+            method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className={styles.contactForm}
           >
-            <input type="hidden" name="form-name" value="kontakt" />
+            <input type="hidden" name="form-name" value="offert" />
             <p hidden>
               <label>
                 Don’t fill this out if you're human:
@@ -81,43 +68,64 @@ const Contact = () => {
               </label>
             </p>
 
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Ditt namn" 
-              className={styles.inputField} 
+            <input
+              type="text"
+              name="name"
+              placeholder="Ditt namn"
+              className={styles.inputField}
               value={formData.name}
               onChange={handleInputChange}
-              required 
+              required
             />
 
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Din e-post" 
-              className={styles.inputField} 
+            <input
+              type="email"
+              name="email"
+              placeholder="Din e-post"
+              className={styles.inputField}
               value={formData.email}
               onChange={handleInputChange}
-              required 
+              required
             />
 
-            <textarea 
-              name="message" 
-              placeholder="Ditt meddelande" 
-              className={styles.textArea} 
-              rows="6"
-              value={formData.message}
+            {/* Lägg till fält för telefonnummer */}
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Ditt telefonnummer"
+              className={styles.inputField}
+              value={formData.phone}
               onChange={handleInputChange}
-              required 
+              required
             />
 
-            <button type="submit" className={styles.submitBtn}>Skicka meddelande</button>
+            <textarea
+              name="projectDescription"
+              placeholder="Kort beskrivning av projektet"
+              className={styles.textArea}
+              rows="4"
+              value={formData.projectDescription}
+              onChange={handleInputChange}
+              required
+            />
+
+            <textarea
+              name="projectDetails"
+              placeholder="Detaljer om projektet (t.ex. mått, material, specifika önskemål)"
+              className={styles.textArea}
+              rows="6"
+              value={formData.projectDetails}
+              onChange={handleInputChange}
+              required
+            />
+
+            <button type="submit" className={styles.submitBtn}>Begär Offert</button>
           </form>
         </section>
       </div>
 
-      <button 
-        className={styles.scrollToTopBtn} 
+      <button
+        className={styles.scrollToTopBtn}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         ↑
@@ -126,4 +134,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default QuoteRequest;

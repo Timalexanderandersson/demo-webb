@@ -8,10 +8,9 @@ const ContactInfo = () => {
         <div className={styles.textBox}>
           <h2>Hitta till oss</h2>
           <p>
-            Vår salong ligger centralt i ort. Vi välkomnar dig in till en avkopplande miljö med professionell service.
-            <br /><br />
-            Oavsett om du är här för en snabb trimning eller en helt ny stil – vi är här för att hjälpa dig!
-          </p>
+  Vi är ett lokalt hantverkarteam med bas i [Ort], redo att hjälpa dig med allt från småfix till större renoveringar.
+  Oavsett om du behöver hjälp med ett nytt kök, badrum eller bara en vägg som ska målas – vi finns här för att göra jobbet rätt från början.
+</p>
         </div>
         <div className={styles.mapBox}>
           <iframe

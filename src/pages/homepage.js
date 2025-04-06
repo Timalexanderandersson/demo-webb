@@ -1,5 +1,5 @@
 import styles from '../styles/homepage.module.css';
-import video from '../assets/newvideo.mp4'; // Justera sökvägen om det behövs
+import video from '../assets/newmovie.mp4';
 import About from './aboutus';
 import ContactInfo from './findus';
 import { Link } from 'react-router-dom';
@@ -16,14 +16,13 @@ const Homepage = () => {
 
           <div className={styles.content}>
             <div className={styles.contenttwo}>
-              <h1 className={styles.header}>
-                Skapa din perfekta stil – vi har erfarenheten och passionen!
-              </h1>
-              <p className={styles.description}>
-                Vi strävar efter att skapa en varm och inbjudande atmosfär där du kan slappna av och känna dig som hemma.
-              </p>
+            <h1 className={styles.header}>
+  Resultat som håller – hantverk med hjärta och precision.
+</h1>
+<p className={styles.description}>
+  Vi bygger, renoverar och fixar – alltid med fokus på kvalitet, tydlig kommunikation och nöjda kunder.
+</p>
             </div>
-
             <div className={styles.buttons}>
               <h3 className={styles.servicesHeader}>Kontakta oss</h3>
               <div className={styles.buttonstwo}>
@@ -33,7 +32,7 @@ const Homepage = () => {
 </Link>
 
 <a href="https://www.dinsida.com/bokning" className={styles.servicesBtn} target="_blank" rel="noopener noreferrer">
-  Boka tid
+  Lämna Offert
 </a>
 
               </div>

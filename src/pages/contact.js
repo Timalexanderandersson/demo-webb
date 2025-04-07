@@ -100,7 +100,7 @@ const QuoteRequest = () => {
             />
 
             <textarea
-              name="projectDescription"
+            name="projectDescription"
               placeholder="Kort beskrivning av projektet"
               className={styles.textArea}
               rows="4"

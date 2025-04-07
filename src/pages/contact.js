@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/contact.module.css';
-import imagenav from '../assets/nyaare.jpg'; 
+import imagenav from '../assets/newagain.jpg'; 
 
 const QuoteRequest = () => {
 

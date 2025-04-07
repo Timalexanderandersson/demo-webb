@@ -1,5 +1,5 @@
 import styles from '../styles/homepage.module.css';
-import video from '../assets/newmovie.mp4';
+import video from '../assets/testvid.mp4';
 import About from './aboutus';
 import ContactInfo from './findus';
 import { Link } from 'react-router-dom';
@@ -31,9 +31,9 @@ const Homepage = () => {
   Kontakta oss
 </Link>
 
-<a href="https://www.dinsida.com/bokning" className={styles.servicesBtn} target="_blank" rel="noopener noreferrer">
+<Link to="/offert" className={styles.servicesBtn}>
   Lämna Offert
-</a>
+</Link>
 
               </div>
             </div>

@@ -7,7 +7,7 @@
 
 /* Inner-container: Flexbox med bakgrund och padding */
 .inner {
-  max-width: 105vh; /* Maximal bredd på 105% av viewporthöjden */
+  max-width: 70vh; /* Maximal bredd på 105% av viewporthöjden */
   margin-top: 4vh; /* Marginal uppe för att skapa lite luft */
   display: flex; /* Flexbox för att styra layouten */
   flex-direction: column; /* Kolumnlayout på små skärmar */
@@ -50,6 +50,7 @@
     flex-direction: row; /* Kolumn till rad-läge */
     align-items: center; /* Centrerar vertikalt */
     justify-content: space-between; /* Sprider ut innehållet */
+    max-width: 105vh; /* Maximal bredd på 105% av viewporthöjden */
   }
 
   /* Textboxen och kartan får flex-egenskaper för att dela på utrymmet */

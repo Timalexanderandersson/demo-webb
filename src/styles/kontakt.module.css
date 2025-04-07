@@ -1,0 +1,116 @@
+/* Contact page styles */
+.contactContainer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    
+  }
+  .contactContainertwo{
+    margin-top: 24vh;
+    width: 100%;
+    max-width: 95vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    margin-bottom: 7vh;
+    background: linear-gradient(to bottom, rgb(211, 211, 211), transparent 50%, white);
+
+  }
+  .contactContainertext{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    max-width: 63vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bannerImage {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -0;
+    height: 18vh;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+    /*scroll to top icon*/
+    .scrollToTopBtn {
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        background: linear-gradient(to bottom, rgb(85, 85, 85), transparent 100%, rgb(201, 201, 201));
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 8%; /* Gör knappen rund */
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+      
+      .scrollToTopBtn:hover {
+        background-color: #4d4d4d;
+      }
+      .contactDetails{
+        text-align: left;
+        padding: 1vh;
+        
+        font-size: 1.2rem;
+      }
+
+      .infoItem{
+        padding: 1vh;
+      }
+
+      .contactNote{
+        width: 100%;
+        max-width: 60vh;
+        
+      }
+      .mapContainer{
+        width: 100%;
+        max-width: 70vh;
+        height: 40vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        
+      }
+      .map{
+        width: 100%;
+        height: 90%;
+        border-radius: 3px;
+        border: none;
+        box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .title{
+        font-size: 2rem;
+      }
+     .description{
+        font-size: 1.2rem;
+     }
+     .contactNote{
+        font-size: 1.2rem;
+       
+     }
+     .mapTitle{
+        font-size: 1.7rem;
+        
+     }
+     .linkss{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+     }
+     .linkss:hover{
+        text-decoration: none;
+        color: rgb(189, 189, 189);
+     }

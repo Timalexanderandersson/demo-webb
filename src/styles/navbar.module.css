@@ -10,7 +10,6 @@
     height: 12%;
   }
 
- 
   .innerdiv {
     display: flex;
     justify-content: space-around;
@@ -24,30 +23,36 @@
   .innerdiv::after {
     content: '';
     position: absolute;
-    bottom: 0; /* Sätt den längst ner på innerdiv */
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%); 
     width: 90%;
-    height: 1.5px; /* Justera höjden på linjen */
+    height: 1.5px; 
     background: linear-gradient(to right, white, transparent 50%, white);
   }
   
   .brandName {
     font-size: 1.9rem;
     font-weight: bold;
-    padding-left: 5vh;
-    
+    color: rgb(221, 221, 221);
+    text-decoration: underline;
+   
+  }
+  .brandImage{
+    width: 130px;
+    height: 130px;
+    margin-top: 3vh;
   }
 
   .navLinks {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     list-style: none;
     padding: 0;
   }
-  
+
   .navLinks li {
-    position: relative; /* Gör att ::after kan placeras relativt till li */
+    position: relative; 
   }
 
   .navLinks li::after {
@@ -55,10 +60,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%; /* Starta linjen från 0% bredd */
-    height: 2px; /* Höjd på linjen */
+    width: 0%; 
+    height: 2px; 
     background-color: white;
-    transition: width 0.3s ease-in-out; /* Lägg till en smidig transition */
+    transition: width 0.3s ease-in-out; 
   }
   
   .navLinks a {
@@ -68,7 +73,7 @@
     padding: 1px;
   }
   .navLinks li:hover::after {
-    width: 100%; /* När man hovrar, fyll hela bredden */
+    width: 100%; 
   }
   
   .menuIcon {
@@ -86,34 +91,38 @@
     background-color: rgb(75, 75, 75);
     border-radius: 2px;
   }
-  .dropdownLinks{
+  .dropdownLinks {
     display: flex;
     flex-direction: row;
     width: auto;
-    gap: 40px;
+    gap: 30px;
     list-style: none;
     padding: 0;
+    justify-content: flex-start;  /* Om du vill att länkarna ska vara till vänster */
+    align-items: flex-end;       /* Detta gör att länkarna placeras längst ner */
+    height: 100%;    
+                /* Se till att containern är tillräckligt hög */
   }
   
-  /* For screens smaller than 768px */
-  @media (max-width: 768px) {
+  
+  /* For screens smaller than 870px */
+  @media (max-width: 870px) {
     .navLinks {
       display: none;
       width: 100%;
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top: 70px;
+      top: 80%;
       left: 0;
-      
       padding: 20px 0;
     }
     .navLinks li {
       text-decoration: none;
       color: white;
       font-size: 1.3rem;
-      padding: 1px;
-      width: 75px;
+      padding: 2px;
+      width: 90px;
       
     }
     .navLinks li:hover::after {

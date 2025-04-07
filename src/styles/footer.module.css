@@ -4,6 +4,7 @@
     color: rgb(68, 68, 68); /* Mörkgrå textfärg */
     padding: 20px 0; /* Lite utrymme runtom innehållet */
     width: 100%; /* Gör att footern täcker hela bredden */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Wrapper för footer-innehållet */
@@ -28,30 +29,41 @@
     text-align: center; /* Centrerar texten */
 }
 
+
 /* Media query för större skärmar */
 @media (min-width: 1000px) {
     .footerColumn {
         flex-direction: row; /* Om skärmstorleken är större än 1000px, ordnas kolumnerna horisontellt */
-        width: 70%; /* Sätter bredden på footer-kolumnen till 70% */
+        width: 100%; /* Sätter bredden på footer-kolumnen till 70% */
         max-width: 102vh; /* Begränsar maxbredden till 102% av viewportens höjd */
-        justify-content: space-between; /* Delar upp kolumnerna och sätter dem på kanterna */
-        text-align: left; /* Texten justeras till vänster istället för att vara centrerad */
+        justify-content: space-around; /* Delar upp kolumnerna och sätter dem på kanterna */
+         /* Texten justeras till vänster istället för att vara centrerad */
+         
     }
     .socialMedia {
-        justify-items: center; /* Centrerar sociala media-ikonerna */
+        margin-right: 6vh;
+        padding-right: 2vh;
+            /* Centrerar sociala media-ikonerna */
+    }
+    .contactInfo{
+       text-align: left;
     }
 }
 
 /* Stil för h4-element i footern */
 h4 {
     margin-bottom: 8px; /* Lite utrymme under h4-elementet */
+    font-size: 18px; 
 }
 
 /* Ikoner i sociala medier */
+
 .icons a {
-    font-size: 24px; /* Sätter storleken på ikonerna */
+    font-size: 25px; /* Sätter storleken på ikonerna */
+    justify-content: center;
+    align-items: center; 
     color: rgb(27, 27, 27); /* Standardfärg för ikonerna */
-    margin-right: 15px; /* Lite avstånd mellan ikonerna */
+    margin-right: 18px; /* Lite avstånd mellan ikonerna */
     text-decoration: none; /* Tar bort understrykning på länkar */
 }
 

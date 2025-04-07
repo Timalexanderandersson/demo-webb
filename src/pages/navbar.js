@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';  // Importera HashLink
 import styles from '../styles/navbar.module.css';
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,7 +18,8 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.innerdiv}>
-        <div className={styles.brandName}>Demo Hantverkare</div>
+        <div className={styles.brandName}>
+  GN BYGGNATION</div>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           <span className={styles.burgerIcon}></span>
           <span className={styles.burgerIcon}></span>
@@ -28,7 +30,8 @@ const Navbar = () => {
           <div className={styles.dropdownLinks}>
             <li><Link className={styles.newlink} to="/" onClick={closeMenu}>Hem</Link></li>
             <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Våra jobb</Link></li>
-            <li><HashLink className={styles.newlink} to='/#omoss' onClick={closeMenu}>Om oss</HashLink></li> {/* Använd HashLink */}
+            <li><HashLink className={styles.newlink} to='/#omoss' onClick={closeMenu}>Om oss</HashLink></li>
+            <li><Link className={styles.newlink} to="/offert" onClick={closeMenu}>Offert</Link></li> {/* Använd HashLink */}
             <li><Link className={styles.newlink} to="/kontakt" onClick={closeMenu}>Kontakt</Link></li>
           </div>
         </ul>

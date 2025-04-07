@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet'; // Importera Helmet för SEO
 import styles from '../styles/gallery.module.css';
-import imagenav from '../assets/nyaare.jpg';
-
+import imagenav from '../assets/newagain.jpg'; 
 import cooltss from '../assets/cooltss.jpg';
 import andrabildenav from '../assets/ännuen.jpg';
 import tredje from '../assets/anotherpic.jpg';

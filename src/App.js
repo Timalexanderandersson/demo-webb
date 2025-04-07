@@ -8,6 +8,7 @@ import Gallery from './pages/galleri';
 import Contact from './pages/contact';
 import TackFörDittMeddelande from './pages/thxformessage';
 import NotFound from './pages/404';
+import Kontakt from './pages/easycontact';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/galleri" element={<Gallery />} />
-            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/offert" element={<Contact />} />
+            <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/tackfördittmeddelande" element={<TackFörDittMeddelande />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

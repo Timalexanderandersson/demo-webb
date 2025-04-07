@@ -8,9 +8,12 @@
 /* .galleryContainertwo */
 .galleryContainertwo {
   display: flex; /* Flexbox, för att justera element horisontellt eller vertikalt */
+  width: 100%; /* 
   justify-content: center; /* Centrerar innehållet horisontellt */
   align-items: center; /* Centrerar innehållet vertikalt */
   flex-direction: column; /* Arrangerar elementen i en kolumn */
+  margin-bottom: 6vh;
+ 
 }
 
 /* .newpicturestyle */
@@ -24,46 +27,68 @@
 /* .textContainer */
 .textContainer {
   margin-top: 2vh; /* Lite utrymme ovanför */
-  border-radius: 2px; /* Rundade hörn */
+  border-radius: 10px; /* Rundade hörn */
   text-align: left; /* Justera texten till vänster */
-  padding: 2vh; /* Lite padding runt texten */
-  max-width: 60vh; /* Sätter max bredd på containern */
-  background: linear-gradient(to bottom, rgb(211, 211, 211), transparent 50%, white); /* Bakgrund med gradient */
+  padding: 3vh; /* Lite padding runt texten */
+  max-width: 110vh; /* Sätter max bredd på containern */
+ 
+  
 }
 
 /* .title */
 .title {
-  font-size: 2rem; /* Större textstorlek på titeln */
+  font-size: 2.1rem; /* Större textstorlek på titeln */
   margin-bottom: 2rem; /* Lite utrymme under titeln */
   color: #222; /* Färg på texten */
+  text-align: center;
+  padding: 1vh;
+  text-decoration: underline;
+  
+}
+h3{
+  font-size: 1.6rem;
+  text-decoration: underline;
 }
 
-/* .carousel */
-.carousel {
-  display: flex; /* Flexbox för att justera innehållet horisontellt */
-  align-items: center; /* Vertikal centrering */
-  justify-content: center; /* Horisontell centrering */
-  flex-wrap: nowrap; /* Hindrar elementen från att brytas till ny rad */
-  width: 100%; /* Täcker hela bredden */
-  max-width: 60vh; /* Maxbredd på karusellen */
-  margin: 0 auto; /* Centrerar karusellen */
-  background: linear-gradient(to top, rgb(211, 211, 211), transparent 50%, white); /* Bakgrund med gradient */
-  margin-bottom: 2vh; /* Lite utrymme under karusellen */
-  border-radius: 2px; /* Rundade hörn */
+
+
+.cardImage {
+  max-width: 100vh;
+  width: 100%; /* Gör att bilderna fyller hela bredden på kortet */
+  height: auto; /* Gör så att höjden justeras proportionellt */
+  object-fit: cover; /* Gör så att bilderna fyller sin container utan att bli förvrängda */
+  border-radius: 5px; /* Runda hörnen för varje bild i kortet */
+}
+/* För mobilform: visa endast en bild */
+.cardImage {
+  width: 40vh; /* Gör att bilderna fyller hela bredden på kortet */
+  height: 40vh; /* Gör så att höjden justeras proportionellt */
+  object-fit: cover; /* Gör så att bilderna fyller sin container utan att bli förvrängda */
+  border-radius: 5px; /* Runda hörnen för varje bild i kortet */
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.4); 
 }
 
-/* .imageBox */
-.imageBox {
-  width: 48vh; /* Bredden på varje bildbox */
-  height: 400px; /* Höjden på varje bildbox */
-  overflow: hidden; /* Döljer innehåll som går utanför */
-  position: relative; /* För att kunna positionera elementen inuti */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Skugga på boxen */
-  margin-bottom: 1vh; /* Lite utrymme under varje box */
-  display: flex; /* Flexbox för att centrera innehållet */
-  justify-content: center; /* Centrerar innehållet horisontellt */
-  align-items: center; /* Centrerar innehållet vertikalt */
+/* För att justera layouten för korten */
+.imageCards {
+  margin-left: 2vh;
+  max-width: 100vh;
+  display: flex;
+  justify-content: space-around; /* Ser till att bilderna är jämnt fördelade */
+  flex-wrap: wrap; /* Gör att korten bryts till ny rad när det behövs */
+  gap: 20px; /* Lägger till avstånd mellan korten */
+  margin-top: 2rem; /* Lite utrymme över galleriet */
+  
 }
+.card{
+  width: 39vh;
+  text-align: left;
+  padding: 3px;
+  border-radius: 3px;
+  
+}
+
+
+
 
 /* .navBtn */
 .navBtn {
@@ -97,32 +122,9 @@
   right: 1rem; /* Placera höger knapp */
 }
 
-/* .imageItem */
-.imageItem {
-  display: none; /* Döljer bilden som standard */
-  width: 100%; /* Gör att bilden täcker hela utrymmet */
-  height: 100%; /* Gör att bilden täcker hela utrymmet */
-  justify-content: center; /* Centrerar innehållet */
-  align-items: center; /* Centrerar innehållet vertikalt */
-  font-size: 1.5rem; /* Textstorlek */
-  color: #555; /* Textfärg */
-  background-color: #ddd; /* Bakgrundsfärg för inaktiv bild */
-  border-radius: 3px; /* Rundade hörn */
-  transition: opacity 0.5s ease; /* Smidig övergångseffekt */
-}
 
-/* .imageItem.active */
-.imageItem.active {
-  display: flex; /* Gör den aktiva bilden synlig */
-}
 
-/* .imageItem img */
-.imageItem img {
-  width: 100%; /* Bilden fyller hela utrymmet */
-  height: 100%; /* Bilden fyller hela utrymmet */
-  object-fit: cover; /* Gör så att bilden täcker hela området */
-  border-radius: 3px; /* Rundade hörn på bilden */
-}
+
 
 /* .scrollToTopBtn */
 .scrollToTopBtn {

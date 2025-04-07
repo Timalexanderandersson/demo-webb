@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/about.module.css';
-import aboutImage from '../assets/nybild.jpg'; // Byt ut mot din bild
+import aboutImage from '../assets/arbetare.webp'; // Byt ut mot din bild
 
 const About = () => {
   return (

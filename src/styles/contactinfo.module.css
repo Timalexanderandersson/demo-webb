@@ -12,7 +12,7 @@
   display: flex; /* Flexbox för att styra layouten */
   flex-direction: column; /* Kolumnlayout på små skärmar */
   border-radius: 3px; /* Rundade hörn */
-  background: linear-gradient(to left, rgb(231, 231, 231), transparent 40%, white); /* Bakgrundsgradient */
+  background: linear-gradient(to left, rgb(240, 240, 240), transparent 40%, white); /* Bakgrundsgradient */
   margin-bottom: 4vh; /* Marginal under för att skapa luft */
   padding: 3vh; /* Padding för att ge inre utrymme */
 }

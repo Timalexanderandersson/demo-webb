@@ -29,7 +29,7 @@ const Navbar = () => {
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
           <div className={styles.dropdownLinks}>
             <li><Link className={styles.newlink} to="/" onClick={closeMenu}>Hem</Link></li>
-            <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Våra jobb</Link></li>
+            <li><Link className={styles.newlink} to="/galleri" onClick={closeMenu}>Våra tjänster</Link></li>
             <li><HashLink className={styles.newlink} to='/#omoss' onClick={closeMenu}>Om oss</HashLink></li>
             <li><Link className={styles.newlink} to="/offert" onClick={closeMenu}>Offert</Link></li> {/* Använd HashLink */}
             <li><Link className={styles.newlink} to="/kontakt" onClick={closeMenu}>Kontakt</Link></li>

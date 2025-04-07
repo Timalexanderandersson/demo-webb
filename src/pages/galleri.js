@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet'; // Importera Helmet för SEO
 import styles from '../styles/gallery.module.css';
-import imagenav from '../assets/newagain.jpg'; 
-import cooltss from '../assets/cooltss.jpg';
-import andrabildenav from '../assets/ännuen.jpg';
-import tredje from '../assets/anotherpic.jpg';
-import fjärde from '../assets/newpictures.webp';
+import imagenav from '../assets/newagain.jpg';
+import cooltss from '../assets/ballkong.jpg';
+import andrabildenav from '../assets/nyabalkong.jpg';
+import tredje from '../assets/roofers-2891664_1280.jpg';
+import fjärde from '../assets/fasadbyte.jpg';
 
 const Gallery = () => {
-  const items = [cooltss, andrabildenav, tredje, fjärde];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-  };
+  const items = [
+    { image: cooltss, title: 'Veranda', description: 'Byggnation av en elegant veranda, perfekt för att förlänga sommaren och skapa en härlig utomhusmiljö.' },
+    { image: andrabildenav, title: 'Balkonger', description: 'Renovering av balkonger med hållbara material och en design som ger både stil och funktionalitet.' },
+    { image: tredje, title: 'Takläggning', description: 'Ny takläggning med högkvalitativa takpannor för att säkerställa lång livslängd och bästa skydd mot väder och vind.' },
+    { image: fjärde, title: 'Fasadbyten', description: 'Fullständig renovering av fasader med fokus på både estetik och hållbarhet för att förbättra både utseende och energioptimering.' }
+  ];
 
   return (
     <div className={styles.galleryContainer}>
@@ -41,31 +37,24 @@ const Gallery = () => {
       <div className={styles.galleryContainertwo}>
         <img src={imagenav} alt="navbar bild" className={styles.newpicturestyle} />
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>Våra jobb</h2>
-          <p className={styles.description}>
-            Här kan ni se några exempel på våra tidigare jobb och tjänster. Bilderna visar vad vi erbjuder och hur resultatet kan se ut – från nöjda kunder till före- och efterbilder.
-          </p>
+        <h2 className={styles.title}>Våra Tjänster</h2>
+<p className={styles.description}>
+  Vi erbjuder ett brett utbud av hantverkstjänster för både privatpersoner och företag. Oavsett om det handlar om att bygga en ny veranda, lägga om taket, byta fasad eller renovera balkonger – vi levererar alltid med fokus på kvalitet, noggrannhet och kundnöjdhet. Här nedan kan du se några exempel på tidigare projekt vi har genomfört, och få en känsla för vad vi kan skapa tillsammans med dig.
+</p>
+
         </div>
 
-        <div className={styles.carousel}>
-          <div className={styles.imageBox}>
-            <button className={`${styles.navBtn} ${styles.left}`} onClick={handlePrev}>{'<'}</button>
-
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.imageItem} ${index === currentIndex ? styles.active : ''}`}
-              >
-                {index === currentIndex && (
-                  <img src={item} alt={`Bild ${index + 1}`} className={styles.carouselImage} />
-                )}
-              </div>
-            ))}
-
-            <button className={`${styles.navBtn} ${styles.right}`} onClick={handleNext}>{'>'}</button>
-          </div>
+        <div className={styles.imageCards}>
+          {items.map((item, index) => (
+            <div key={index} className={styles.card}>
+              <img src={item.image} alt={`Bild för ${item.title}`} className={styles.cardImage} />
+              <h3 className={styles.cardTitle}>{item.title}</h3>
+              <p className={styles.cardDescription}>{item.description}</p> {/* Här läggs beskrivningen till */}
+            </div>
+          ))}
         </div>
       </div>
+
       <button className={styles.scrollToTopBtn} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         ↑
       </button>

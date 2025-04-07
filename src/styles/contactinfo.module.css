@@ -3,6 +3,7 @@
   width: 100%; /* Full bredd */
   display: flex; /* Flexbox för att centrera innehåll */
   justify-content: center; /* Centrerar innehållet horisontellt */
+
 }
 
 /* Inner-container: Flexbox med bakgrund och padding */
@@ -50,7 +51,8 @@
     flex-direction: row; /* Kolumn till rad-läge */
     align-items: center; /* Centrerar vertikalt */
     justify-content: space-between; /* Sprider ut innehållet */
-    max-width: 105vh; /* Maximal bredd på 105% av viewporthöjden */
+    width: 100%; 
+    max-width:100vh;
   }
 
   /* Textboxen och kartan får flex-egenskaper för att dela på utrymmet */

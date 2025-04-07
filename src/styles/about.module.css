@@ -13,7 +13,7 @@
   flex-direction: column; /* Vertikal layout på små skärmar */
   align-items: center; /* Centrerar innehållet horisontellt */
   text-align: center; /* Texten centreras */
-  padding: 2vh; /* Lägger till utrymme runt innehållet */
+
   background: linear-gradient(to right, #f0f0f0, transparent 50%, white); /* Bakgrund med gradient */
   border-radius: 3px; /* Rundade hörn */
   color: rgb(0, 0, 0); 
@@ -23,16 +23,18 @@
 .textContainer {
   margin-bottom: 20px; /* Avstånd mellan text och bild */
   text-align: left; /* Justerar texten till vänster på större skärmar */
+  padding: 3vh;
 }
 
 /* ----- Bildcontainer ----- */
 .imageContainer img {
   width: 100%; /* Gör bilden fullbredd */
   max-width: 460px; /* Maxbredd för bilden */
-  height: 40vh; /* Höjd på 40% av viewporten */
+  height: auto; /* Höjd på 40% av viewporten */
   object-fit: contain; /* Bibehåller bildens proportioner */
   border-radius: 3px; /* Rundade hörn på bilden */
 }
+
 .textContainer h2 {
   font-size: 2rem; 
 }
@@ -57,8 +59,10 @@
 
   .imageContainer img {
       max-width: 100%; /* Bilden fyller hela bredden på containern */
+      
   }
   .textContainer h2 {
       font-size: 2rem; 
   }
+
 }

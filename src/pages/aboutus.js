@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/about.module.css';
-import aboutImage from '../assets/arbetare.webp'; // Byt ut mot din bild
+import aboutImage from '../assets/workers-7593940_1280 (1).jpg'; // Byt ut mot din bild
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.imageContainer}>
-          <img src={aboutImage} alt="Om oss" />
+          <img src={aboutImage} alt="Om oss"  className={styles.imageContainertwo}/>
         </div>
       </div>
     </div>

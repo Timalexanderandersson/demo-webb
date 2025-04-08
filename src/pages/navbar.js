@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.innerdiv}>
         <div className={styles.brandName}>
-  GN BYGGNATION</div>
+  Demo bygg</div>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           <span className={styles.burgerIcon}></span>
           <span className={styles.burgerIcon}></span>
